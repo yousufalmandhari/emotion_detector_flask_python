@@ -11,7 +11,7 @@ def emotion_detector(text_to_analyse):
     if response.status_code == 200:
         emotion_predictor = formatted_response['emotionPredictions'][0]['emotion']
     
-    elif response.status_code == 500:
+    elif response.status_code == 400:
         emotion_predictor = None
 
     return emotion_predictor
